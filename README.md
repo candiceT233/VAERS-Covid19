@@ -1,5 +1,6 @@
-# VAERS-Covid19-CS584ML
+# VAERS-Covid19
 Project idea from Kaggle: COVID-19 World Vaccine Adverse Reactions by Ayush Garg.
+Project for class CS584ML
 
 ## Note:
 Raw data and merged dataset is not uploaded due to large size. Original data can be found: https://www.kaggle.com/ayushggarg/covid19-vaccine-adverse-reactions?select=2021VAERSVAX.csv
