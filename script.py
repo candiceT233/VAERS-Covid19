@@ -142,6 +142,20 @@ def classification_train(cat,x,y):
     report = classification_report(y_test, lr.predict(X_test))
     return lr, report
 
+def modchoice_getname():
+    modchoice=input(modchoicetext)
+    modname=''
+    if modchoice == '1':
+        modname='SGDC'
+    elif modchoice == '2':
+        modname='LRC'
+    elif modchoice == '3':
+        modname='KNC'
+    elif modchoice == '4':
+        modname='NNC'
+
+    return modname
+
 def plot_raw_data(df):
 
     plt.scatter(df.AGE_YRS, df.ALLERGIES, c='red', marker = 'x')
@@ -336,24 +350,7 @@ def pre_process():
     allergy_pd.to_excel(catmap_dir+"/SYMPTOMS"+suffix,index=False)
     df.to_excel(PROCESSED, index=True)
 
-def modchoice_getname():
-    modchoice=input(modchoicetext)
-    modname=''
-    if modchoice == '1':
-        modname='SGDC'
-    elif modchoice == '2':
-        modname='LRC'
-    elif modchoice == '3':
-        modname='KNC'
-    elif modchoice == '4':
-        modname='NNC'
-
-    return modname
-
-def train_data():
-
-    modname = modchoice_getname()
-
+def split_feat_target():
     df =pd.read_excel(PROCESSED,encoding='windows-1252')
     df_targets = df[["DIED","L_THREAT","ER_ED_VISIT","HOSPITAL",
     "DISABLE","RECOVD"]]
@@ -384,6 +381,13 @@ def train_data():
 
     df_feat.to_excel(FEATURES, index=True)
 
+
+def train_data():
+
+    modname = modchoice_getname()
+
+    df_feat =pd.read_excel(FEATURES,encoding='windows-1252')
+    df_targets =pd.read_excel(TARGETS,encoding='windows-1252')
 
     df_feat.columns = range(df_feat.shape[1]) # Delete headers.
 
@@ -507,6 +511,7 @@ def main():
     if choice == 'y':
         merge_datasheet()
         pre_process()
+        split_feat_target()
     choice=input("Visualize raw data? [y/n]")
     print()
     if choice == 'y':
