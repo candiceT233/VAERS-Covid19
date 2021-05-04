@@ -1,0 +1,1089 @@
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Stochastic Gradient Descent Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.93      1.00      0.97     13552
+           1       0.00      0.00      0.00       950
+
+    accuracy                           0.93     14502
+   macro avg       0.47      0.50      0.48     14502
+weighted avg       0.87      0.93      0.90     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.95      0.90      0.92     13664
+           1       0.12      0.24      0.16       838
+
+    accuracy                           0.86     14502
+   macro avg       0.54      0.57      0.54     14502
+weighted avg       0.90      0.86      0.88     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.84      0.63      0.72     11398
+           1       0.29      0.57      0.39      3104
+
+    accuracy                           0.62     14502
+   macro avg       0.57      0.60      0.55     14502
+weighted avg       0.72      0.62      0.65     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.86      0.92      0.89     11809
+           1       0.50      0.37      0.42      2693
+
+    accuracy                           0.81     14502
+   macro avg       0.68      0.64      0.66     14502
+weighted avg       0.80      0.81      0.80     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      0.69      0.81     14035
+           1       0.05      0.46      0.09       467
+
+    accuracy                           0.68     14502
+   macro avg       0.51      0.58      0.45     14502
+weighted avg       0.94      0.68      0.78     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.61      0.06      0.10      9567
+           1       0.34      0.93      0.49      4935
+
+    accuracy                           0.35     14502
+   macro avg       0.47      0.49      0.30     14502
+weighted avg       0.52      0.35      0.24     14502
+
+================================
+Train model? [y/n]Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Logistic Regression Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.98      0.68      0.80     13552
+           1       0.15      0.82      0.25       950
+
+    accuracy                           0.68     14502
+   macro avg       0.57      0.75      0.53     14502
+weighted avg       0.93      0.68      0.76     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.97      0.77      0.86     13664
+           1       0.15      0.66      0.24       838
+
+    accuracy                           0.76     14502
+   macro avg       0.56      0.71      0.55     14502
+weighted avg       0.93      0.76      0.82     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.85      0.73      0.79     11398
+           1       0.35      0.53      0.42      3104
+
+    accuracy                           0.69     14502
+   macro avg       0.60      0.63      0.60     14502
+weighted avg       0.74      0.69      0.71     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.92      0.78      0.85     11809
+           1       0.43      0.71      0.54      2693
+
+    accuracy                           0.77     14502
+   macro avg       0.68      0.75      0.69     14502
+weighted avg       0.83      0.77      0.79     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      0.86      0.92     14035
+           1       0.07      0.33      0.12       467
+
+    accuracy                           0.85     14502
+   macro avg       0.52      0.60      0.52     14502
+weighted avg       0.95      0.85      0.89     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.74      0.51      0.61      9567
+           1       0.41      0.64      0.50      4935
+
+    accuracy                           0.56     14502
+   macro avg       0.57      0.58      0.55     14502
+weighted avg       0.62      0.56      0.57     14502
+
+================================
+Train model? [y/n]Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): K Neighbors Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.96      0.99      0.97     13552
+           1       0.71      0.39      0.51       950
+
+    accuracy                           0.95     14502
+   macro avg       0.84      0.69      0.74     14502
+weighted avg       0.94      0.95      0.94     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.95      0.98      0.97     13664
+           1       0.31      0.11      0.17       838
+
+    accuracy                           0.93     14502
+   macro avg       0.63      0.55      0.57     14502
+weighted avg       0.91      0.93      0.92     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.82      0.91      0.86     11398
+           1       0.43      0.26      0.33      3104
+
+    accuracy                           0.77     14502
+   macro avg       0.63      0.59      0.59     14502
+weighted avg       0.74      0.77      0.75     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.88      0.94      0.91     11809
+           1       0.62      0.46      0.53      2693
+
+    accuracy                           0.85     14502
+   macro avg       0.75      0.70      0.72     14502
+weighted avg       0.83      0.85      0.84     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     14035
+           1       0.35      0.07      0.11       467
+
+    accuracy                           0.97     14502
+   macro avg       0.66      0.53      0.55     14502
+weighted avg       0.95      0.97      0.95     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.70      0.77      0.73      9567
+           1       0.45      0.36      0.40      4935
+
+    accuracy                           0.63     14502
+   macro avg       0.57      0.57      0.57     14502
+weighted avg       0.61      0.63      0.62     14502
+
+================================
+Train model? [y/n]Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Neural Network Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.95      0.99      0.97     13552
+           1       0.63      0.25      0.36       950
+
+    accuracy                           0.94     14502
+   macro avg       0.79      0.62      0.67     14502
+weighted avg       0.93      0.94      0.93     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97     13664
+           1       1.00      0.01      0.02       838
+
+    accuracy                           0.94     14502
+   macro avg       0.97      0.50      0.49     14502
+weighted avg       0.95      0.94      0.92     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.80      0.97      0.88     11398
+           1       0.50      0.12      0.19      3104
+
+    accuracy                           0.79     14502
+   macro avg       0.65      0.54      0.54     14502
+weighted avg       0.74      0.79      0.73     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.88      0.94      0.91     11809
+           1       0.64      0.45      0.53      2693
+
+    accuracy                           0.85     14502
+   macro avg       0.76      0.70      0.72     14502
+weighted avg       0.84      0.85      0.84     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     14035
+           1       0.00      0.00      0.00       467
+
+    accuracy                           0.97     14502
+   macro avg       0.48      0.50      0.49     14502
+weighted avg       0.94      0.97      0.95     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.68      0.91      0.78      9567
+           1       0.51      0.19      0.27      4935
+
+    accuracy                           0.66     14502
+   macro avg       0.60      0.55      0.53     14502
+weighted avg       0.63      0.66      0.61     14502
+
+================================
+Train model? [y/n]Predict Patient Outcome?n
+
+Exit...
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Predict Patient Outcome?
+Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 0 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [0 0 0 0 0 0]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [1 0 0 0 1 0]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 1 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [0 0 0 0 0 0]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [0 0 0 0 0 0]
+Predict Patient Outcome?Exit...
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Predict Patient Outcome?
+Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 0 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [0 0 0 0 0 0]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [0 0 0 0 0 0]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 1 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [0 0 0 0 0 0]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [0 0 0 0 0 0]
+Predict Patient Outcome?Exit...
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Predict Patient Outcome?
+Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 0 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [0 0 0 0 0 1]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [1 0 0 0 1 0]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 0 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [0 0 0 0 0 0]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [1 0 1 0 0 0]
+Predict Patient Outcome?Exit...
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Predict Patient Outcome?
+Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 1 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [1 1 1 1 1 1]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [1 1 1 1 1 1]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 1 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [1 1 0 1 0 1]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [0 1 1 0 0 0]
+Predict Patient Outcome?Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 0 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [1 0 0 0 0 1]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [1 1 1 1 1 1]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 0 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [0 0 0 0 1 0]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [1 1 0 1 1 1]
+Predict Patient Outcome?Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 0 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [0 0 0 0 0 0]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [0 0 0 0 0 0]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 1 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [0 0 0 0 0 0]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [0 0 0 0 0 0]
+Predict Patient Outcome?Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 0 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [0 0 0 0 0 0]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [1 1 1 1 1 1]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 1 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [1 1 0 1 0 1]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [0 0 0 0 0 0]
+Predict Patient Outcome?Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 0 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [0 0 0 0 0 0]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [1 1 1 1 1 1]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 1 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [0 0 0 0 0 0]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [0 0 0 0 0 0]
+Predict Patient Outcome?Input file name: For target Death:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Death predicted = [0 0 0 0 0 0]
+For target Live-Threatening:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Live-Threatening predicted = [0 0 0 0 0 0]
+For target ER-Visit:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): ER-Visit predicted = [1 0 0 0 1 0]
+For target Hospitalization:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Hospitalization predicted = [1 1 1 1 1 1]
+For target Disabled:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Disabled predicted = [1 1 0 1 0 1]
+For target Recovered:
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Recovered predicted = [0 0 0 0 0 0]
+Predict Patient Outcome?Exit...
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Stochastic Gradient Descent Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.96      0.42      0.59     13552
+           1       0.09      0.76      0.15       950
+
+    accuracy                           0.45     14502
+   macro avg       0.52      0.59      0.37     14502
+weighted avg       0.91      0.45      0.56     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.94      0.94      0.94     13664
+           1       0.05      0.05      0.05       838
+
+    accuracy                           0.89     14502
+   macro avg       0.49      0.49      0.49     14502
+weighted avg       0.89      0.89      0.89     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.76      0.39      0.52     11398
+           1       0.19      0.54      0.29      3104
+
+    accuracy                           0.42     14502
+   macro avg       0.48      0.47      0.40     14502
+weighted avg       0.64      0.42      0.47     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.84      0.10      0.18     11809
+           1       0.19      0.92      0.31      2693
+
+    accuracy                           0.25     14502
+   macro avg       0.52      0.51      0.25     14502
+weighted avg       0.72      0.25      0.20     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      0.93      0.95     14035
+           1       0.04      0.10      0.06       467
+
+    accuracy                           0.90     14502
+   macro avg       0.51      0.51      0.50     14502
+weighted avg       0.94      0.90      0.92     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.65      0.25      0.37      9567
+           1       0.34      0.73      0.46      4935
+
+    accuracy                           0.42     14502
+   macro avg       0.49      0.49      0.41     14502
+weighted avg       0.54      0.42      0.40     14502
+
+================================
+Train model? [y/n]Predict Patient Outcome?
+Exit...
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Stochastic Gradient Descent Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.94      0.22      0.35     13552
+           1       0.07      0.81      0.13       950
+
+    accuracy                           0.26     14502
+   macro avg       0.51      0.51      0.24     14502
+weighted avg       0.89      0.26      0.34     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.94      0.71      0.81     13664
+           1       0.06      0.29      0.09       838
+
+    accuracy                           0.68     14502
+   macro avg       0.50      0.50      0.45     14502
+weighted avg       0.89      0.68      0.77     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.79      0.77      0.78     11398
+           1       0.22      0.23      0.22      3104
+
+    accuracy                           0.65     14502
+   macro avg       0.50      0.50      0.50     14502
+weighted avg       0.66      0.65      0.66     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.81      0.69      0.75     11809
+           1       0.18      0.30      0.22      2693
+
+    accuracy                           0.62     14502
+   macro avg       0.50      0.49      0.49     14502
+weighted avg       0.69      0.62      0.65     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      0.81      0.88     14035
+           1       0.03      0.16      0.05       467
+
+    accuracy                           0.79     14502
+   macro avg       0.50      0.48      0.46     14502
+weighted avg       0.94      0.79      0.85     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.66      0.99      0.79      9567
+           1       0.37      0.01      0.02      4935
+
+    accuracy                           0.66     14502
+   macro avg       0.52      0.50      0.41     14502
+weighted avg       0.56      0.66      0.53     14502
+
+================================
+Train model? [y/n]Predict Patient Outcome?
+Exit...
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Stochastic Gradient Descent Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.94      0.21      0.35     13552
+           1       0.07      0.81      0.12       950
+
+    accuracy                           0.25     14502
+   macro avg       0.50      0.51      0.23     14502
+weighted avg       0.88      0.25      0.33     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.94      0.22      0.35     13664
+           1       0.06      0.77      0.11       838
+
+    accuracy                           0.25     14502
+   macro avg       0.50      0.49      0.23     14502
+weighted avg       0.89      0.25      0.34     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.77      0.76      0.76     11398
+           1       0.14      0.14      0.14      3104
+
+    accuracy                           0.63     14502
+   macro avg       0.45      0.45      0.45     14502
+weighted avg       0.63      0.63      0.63     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.85      0.46      0.60     11809
+           1       0.21      0.64      0.32      2693
+
+    accuracy                           0.50     14502
+   macro avg       0.53      0.55      0.46     14502
+weighted avg       0.73      0.50      0.55     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     14035
+           1       0.50      0.00      0.00       467
+
+    accuracy                           0.97     14502
+   macro avg       0.73      0.50      0.49     14502
+weighted avg       0.95      0.97      0.95     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.66      0.71      0.68      9567
+           1       0.35      0.30      0.33      4935
+
+    accuracy                           0.57     14502
+   macro avg       0.51      0.51      0.51     14502
+weighted avg       0.56      0.57      0.56     14502
+
+================================
+Train model? [y/n]Predict Patient Outcome?
+Exit...
+Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Neural Network Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.95      0.99      0.97     13552
+           1       0.65      0.26      0.37       950
+
+    accuracy                           0.94     14502
+   macro avg       0.80      0.62      0.67     14502
+weighted avg       0.93      0.94      0.93     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97     13664
+           1       0.76      0.02      0.04       838
+
+    accuracy                           0.94     14502
+   macro avg       0.85      0.51      0.51     14502
+weighted avg       0.93      0.94      0.92     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.81      0.97      0.88     11398
+           1       0.56      0.15      0.24      3104
+
+    accuracy                           0.79     14502
+   macro avg       0.68      0.56      0.56     14502
+weighted avg       0.75      0.79      0.74     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.88      0.94      0.91     11809
+           1       0.65      0.45      0.53      2693
+
+    accuracy                           0.85     14502
+   macro avg       0.76      0.70      0.72     14502
+weighted avg       0.84      0.85      0.84     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     14035
+           1       0.00      0.00      0.00       467
+
+    accuracy                           0.97     14502
+   macro avg       0.48      0.50      0.49     14502
+weighted avg       0.94      0.97      0.95     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.68      0.91      0.78      9567
+           1       0.51      0.18      0.27      4935
+
+    accuracy                           0.66     14502
+   macro avg       0.60      0.55      0.52     14502
+weighted avg       0.62      0.66      0.61     14502
+
+================================
+Train model? [y/n]Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Process data? [y/n]
+Visualize raw data? [y/n]
+Train model? [y/n]
+Please choose a model:
+1. Stochastic Gradient Descent Classification
+2. Logistic Regression Classification
+3. K Neighbors Classification
+4. Neural Network Classification
+(choose number): Neural Network Classification
+================================
+Category =  Death
+              precision    recall  f1-score   support
+
+           0       0.95      0.99      0.97     13552
+           1       0.61      0.25      0.36       950
+
+    accuracy                           0.94     14502
+   macro avg       0.78      0.62      0.66     14502
+weighted avg       0.93      0.94      0.93     14502
+
+================================
+Category =  Live-Threatening
+              precision    recall  f1-score   support
+
+           0       0.94      1.00      0.97     13664
+           1       0.33      0.00      0.00       838
+
+    accuracy                           0.94     14502
+   macro avg       0.64      0.50      0.49     14502
+weighted avg       0.91      0.94      0.91     14502
+
+================================
+Category =  ER-Visit
+              precision    recall  f1-score   support
+
+           0       0.80      0.97      0.88     11398
+           1       0.54      0.12      0.19      3104
+
+    accuracy                           0.79     14502
+   macro avg       0.67      0.54      0.54     14502
+weighted avg       0.75      0.79      0.73     14502
+
+================================
+Category =  Hospitalization
+              precision    recall  f1-score   support
+
+           0       0.88      0.94      0.91     11809
+           1       0.65      0.46      0.54      2693
+
+    accuracy                           0.85     14502
+   macro avg       0.77      0.70      0.72     14502
+weighted avg       0.84      0.85      0.84     14502
+
+================================
+Category =  Disabled
+              precision    recall  f1-score   support
+
+           0       0.97      1.00      0.98     14035
+           1       0.00      0.00      0.00       467
+
+    accuracy                           0.97     14502
+   macro avg       0.48      0.50      0.49     14502
+weighted avg       0.94      0.97      0.95     14502
+
+================================
+Category =  Recovered
+              precision    recall  f1-score   support
+
+           0       0.68      0.93      0.79      9567
+           1       0.52      0.14      0.22      4935
+
+    accuracy                           0.66     14502
+   macro avg       0.60      0.54      0.50     14502
+weighted avg       0.62      0.66      0.59     14502
+
+================================
+Train model? [y/n]Predict Patient Outcome?
+Exit...
