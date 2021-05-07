@@ -14,17 +14,17 @@ The script include five steps from data processing to graphing to training model
 - needs data files inside rawdata directory
 - merge 3 datasets into 1
 - preprocess text data into numbers, number to text mapping are saved under category directory
-- split merged dataset into feature and target datasets
 ### 2 Visualize raw data 
 - needs data files inside rawdata directory
 - graph data into scatter plots 
 ### 3 Train model 
-- needs feature and targe dataset file
-Train model with 4 choices:
+- needs merged dataset file
+- split merged dataset into feature and target datasets
+- Train model with 4 choices:
 1. Stochastic Gradient Descent Classification
 2. Logistic Regression Classification
 3. K Neighbors Classification
-4. Neural Network Classification
+4. Neural Network Classification with MLP
 After training, model are saved under models directory.
 ### 4 Using model to predict patient outcomt
 - needs trained and saved files inside models direcotory and input file

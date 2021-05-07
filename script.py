@@ -111,14 +111,30 @@ def neural_net_train(cat,x,y):
     X_train = scaler.transform(X_train)
     X_test = scaler.transform(X_test)
 
-    nn = MLPClassifier(solver='adam', alpha=1e-7, hidden_layer_sizes=(10, 4),
-    random_state=42, batch_size=200,learning_rate='adaptive',
-    learning_rate_init=0.001, shuffle=True)
-    #MLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 1), random_state=42,solver='lbfgs')
+    LR_init_map ={"Death": [0.01,20], "Live-Threatening":[0.0001,20], "ER-Visit":[0.001,7],
+    "Hospitalization":[0.001,6], "Disabled":[0.0001,20],"Recovered":[0.0001,20]}
+    lr_init = LR_init_map[cat][0]
+    layers = LR_init_map[cat][1]
 
+
+    nn = MLPClassifier(solver='adam', alpha=1e-7, hidden_layer_sizes=(5, 1),
+    random_state=42,learning_rate='adaptive', learning_rate_init=lr_init,
+    shuffle=True, warm_start=True, max_iter=20) # batch_size=200
     nn.fit(X_train, y_train)
-    acc_perc = nn.score(X_test, y_test, sample_weight=None)
+    loss = []
+
+    for i in range(layers):
+        nn.fit(X_train, y_train)
+        loss.append(1- nn.score(X_test, y_test, sample_weight=None))
+
+    MLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 1), random_state=42,solver='adam',learning_rate='adaptive')
+
     y_pred = nn.predict(X_test)
+
+    plt.plot(range(layers), loss, '-')
+    plt.title(f"{cat}, lr_init = {lr_init}")
+    plt.show()
+
 
     report = classification_report(y_test, nn.predict(X_test))
     return nn, report
@@ -141,20 +157,6 @@ def classification_train(cat,x,y):
 
     report = classification_report(y_test, lr.predict(X_test))
     return lr, report
-
-def modchoice_getname():
-    modchoice=input(modchoicetext)
-    modname=''
-    if modchoice == '1':
-        modname='SGDC'
-    elif modchoice == '2':
-        modname='LRC'
-    elif modchoice == '3':
-        modname='KNC'
-    elif modchoice == '4':
-        modname='NNC'
-
-    return modname
 
 def plot_raw_data(df):
 
@@ -350,7 +352,25 @@ def pre_process():
     allergy_pd.to_excel(catmap_dir+"/SYMPTOMS"+suffix,index=False)
     df.to_excel(PROCESSED, index=True)
 
-def split_feat_target():
+def modchoice_getname():
+    modchoice=input(modchoicetext)
+    modname=''
+    if modchoice == '1':
+        modname='SGDC'
+    elif modchoice == '2':
+        modname='LRC'
+    elif modchoice == '3':
+        modname='KNC'
+    elif modchoice == '4':
+        modname='NNC'
+
+    return modname
+
+
+def train_data():
+
+    modname = modchoice_getname()
+
     df =pd.read_excel(PROCESSED,encoding='windows-1252')
     df_targets = df[["DIED","L_THREAT","ER_ED_VISIT","HOSPITAL",
     "DISABLE","RECOVD"]]
@@ -380,15 +400,6 @@ def split_feat_target():
         features.append(my_list)
 
     df_feat.to_excel(FEATURES, index=True)
-
-
-def train_data():
-
-    modname = modchoice_getname()
-
-    df_feat =pd.read_excel(FEATURES,encoding='windows-1252')
-    df_targets =pd.read_excel(TARGETS,encoding='windows-1252')
-
     df_feat.columns = range(df_feat.shape[1]) # Delete headers.
 
     X = df_feat.iloc[:, 0:-1].values
@@ -511,7 +522,6 @@ def main():
     if choice == 'y':
         merge_datasheet()
         pre_process()
-        split_feat_target()
     choice=input("Visualize raw data? [y/n]")
     print()
     if choice == 'y':
@@ -522,12 +532,14 @@ def main():
     while choice.lower() == 'y':
         train_data()
         choice=input("Train model? [y/n]")
+        print()
 
-    choice=input("Predict Patient Outcome?")
+    choice=input("Predict Patient Outcome? [y/n]")
     print()
     while choice == 'y':
         predict_patient()
-        choice=input("Predict Patient Outcome?")
+        choice=input("Predict Patient Outcome? [y/n]")
+        print()
 
     print("Exit...")
 
