@@ -11,9 +11,11 @@ from sklearn.decomposition import PCA
 
 import re
 from joblib import dump, load
-import plotly.express as px
 import warnings
+import plotly.express as px
 # pip install plotly
+# https://plotly.com/python/pca-visualization/
+
 
 # ignore all warnings
 warnings.filterwarnings('ignore')  # "error", "ignore", "always", "default", "module" or "once"
@@ -49,39 +51,72 @@ catmap_dir='./category'
 
 def plotPCA():
 
-    df_data = pd.read_excel(PROCESSED,encoding='windows-1252')
-    targets = ["Death", "Live-Threatening", "ER-Visit", "Hospitalization","Disabled","Recovered"]
+    df_feat = pd.read_excel(FEATURES,encoding='windows-1252')
     df_targets = pd.read_excel(TARGETS,encoding='windows-1252')
 
-    df_data = df_data[["AGE_YRS","SEX","V_ADMINBY","CUR_ILL","HISTORY",
-    "ALLERGIES","VAX_MANU","VAX_ROUTE",
-    "SYMPTOM1","SYMPTOM2","SYMPTOM3","SYMPTOM4","SYMPTOM5"]]
+    df_feat = df_feat[["AGE_YRS","SEX","V_ADMINBY","CUR_ILL","HISTORY",
+    "ALLERGIES","VAX_MANU","VAX_ROUTE", "SYMPTOM1","SYMPTOM2","SYMPTOM3",
+    "SYMPTOM4","SYMPTOM5"]]
+    df_targets = df_targets[["DIED","L_THREAT","ER_ED_VISIT","HOSPITAL",
+    "DISABLE","RECOVD"]]
 
-    features = ["AGE_YRS","SEX","V_ADMINBY","CUR_ILL","HISTORY",
-    "ALLERGIES","VAX_MANU","VAX_ROUTE",
-    "SYMPTOM1","SYMPTOM2","SYMPTOM3","SYMPTOM4","SYMPTOM5"]
+    features = []
+    for index, rows in df_feat.iterrows():
+        my_list = [rows.AGE_YRS, rows.SEX, rows.V_ADMINBY, rows.CUR_ILL,
+        rows.HISTORY, rows.ALLERGIES, rows.VAX_MANU , rows.VAX_ROUTE,
+        rows.SYMPTOM1 ,rows.SYMPTOM2 ,rows.SYMPTOM3,
+        rows.SYMPTOM4 ,rows.SYMPTOM5]
+        features.append(my_list)
 
-    feature_part1 = ["AGE_YRS","SEX","V_ADMINBY","CUR_ILL","HISTORY",
-    "ALLERGIES","VAX_MANU","VAX_ROUTE"]
-    df_feat1 = df_data[["AGE_YRS","SEX","V_ADMINBY","CUR_ILL","HISTORY",
-    "ALLERGIES","VAX_MANU","VAX_ROUTE"]]
+    targets = []
+    for index, rows in df_targets.iterrows():
+        my_list = [rows.DIED, rows.L_THREAT, rows.ER_ED_VISIT, rows.HOSPITAL,
+        rows.DISABLE, rows.RECOVD]
+        targets.append(my_list)
+    df_targets.to_excel(TARGETS, index=True)
 
-    feature_part2 = ["SYMPTOM1","SYMPTOM2","SYMPTOM3","SYMPTOM4","SYMPTOM5"]
-    df_feat2 =  df_data[["SYMPTOM1","SYMPTOM2","SYMPTOM3","SYMPTOM4","SYMPTOM5"]]
-    #df_targets += df_feat2
-    print("Ploting data PCA scatterplot")
-    for feat in feature_part1:
-        pca = PCA(n_components=2)
-        components = pca.fit_transform(df_feat1)
-        fig = px.scatter(components, x=0, y=1, color=df_feat1[feat], title=f"{feat} PCA")
+    df_targets.columns = range(df_targets.shape[1])
+
+    targetcat = ["Death", "Live-Threatening", "ER-Visit", "Hospitalization","Disabled","Recovered"]
+
+    df_feat.columns = range(df_feat.shape[1]) # Delete headers.
+    X = df_feat.iloc[:, 0:-1].values
+    pca = PCA(n_components=2)
+    components = pca.fit_transform(X)
+
+    for i in range(0,len(targetcat)):
+        y = df_targets.iloc[:, i].values
+        """
+        fig = px.scatter(components, x=0, y=1, color=y)
+        fig.show()
+        """
+        for label in set(y):
+            plt.scatter(components[y==label, 0], components[y==label, 1],
+            alpha=0.5,label=label)
+
+        plt.xlabel('PC1')
+        plt.ylabel('PC2')
+        plt.title(f'Features vs Target[{targetcat[i]}] PCA')
+        plt.legend()
+        #plt.show()
+        plt.savefig(f'{targetcat[i]}.png')
+        plt.clf()
+
+    pca = PCA(n_components=3)
+    components = pca.fit_transform(X)
+
+    for i in range(0,len(targetcat)):
+        y = df_targets.iloc[:, i].values
+        total_var = pca.explained_variance_ratio_.sum() * 100
+
+        fig = px.scatter_3d(
+            components, x=0, y=1, z=2, color=y,
+            title=f'{targetcat[i]} Total Explained Variance: {total_var:.2f}%',
+            labels={'0': 'PC 1', '1': 'PC 2', '2': 'PC 3'}
+        )
         fig.show()
 
-    print("Ploting data PCA scatterplot")
-    for feat in feature_part2:
-        pca = PCA(n_components=2)
-        components = pca.fit_transform(df_feat2)
-        fig = px.scatter(components, x=0, y=1, color=df_feat2[feat], title=f"{feat} PCA")
-        fig.show()
+
 
 def k_neighbors_classifier(cat,x,y):
     # https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
@@ -111,13 +146,12 @@ def neural_net_train(cat,x,y):
     X_train = scaler.transform(X_train)
     X_test = scaler.transform(X_test)
 
-    LR_init_map ={"Death": [0.01,20], "Live-Threatening":[0.0001,20], "ER-Visit":[0.001,7],
-    "Hospitalization":[0.001,6], "Disabled":[0.0001,20],"Recovered":[0.0001,20]}
+    LR_init_map ={"Death": [0.001,20], "Live-Threatening":[0.0001,40], "ER-Visit":[0.0001,36],
+    "Hospitalization":[0.0001,33], "Disabled":[0.0001,20],"Recovered":[0.0001,35]}
     lr_init = LR_init_map[cat][0]
     layers = LR_init_map[cat][1]
 
-
-    nn = MLPClassifier(solver='adam', alpha=1e-7, hidden_layer_sizes=(5, 1),
+    nn = MLPClassifier(solver='adam', alpha=1e-7, hidden_layer_sizes=(10, 4),
     random_state=42,learning_rate='adaptive', learning_rate_init=lr_init,
     shuffle=True, warm_start=True, max_iter=20) # batch_size=200
     nn.fit(X_train, y_train)
@@ -127,14 +161,13 @@ def neural_net_train(cat,x,y):
         nn.fit(X_train, y_train)
         loss.append(1- nn.score(X_test, y_test, sample_weight=None))
 
-    MLPClassifier(alpha=1e-05, hidden_layer_sizes=(5, 1), random_state=42,solver='adam',learning_rate='adaptive')
+    MLPClassifier(alpha=1e-05, hidden_layer_sizes=(10, 4), random_state=42,solver='adam',learning_rate='adaptive')
 
     y_pred = nn.predict(X_test)
 
-    plt.plot(range(layers), loss, '-')
-    plt.title(f"{cat}, lr_init = {lr_init}")
-    plt.show()
-
+    #plt.plot(range(layers), loss, '-')
+    #plt.title(f"{cat}, lr_init = {lr_init}")
+    #plt.show()
 
     report = classification_report(y_test, nn.predict(X_test))
     return nn, report
@@ -522,7 +555,7 @@ def main():
     if choice == 'y':
         merge_datasheet()
         pre_process()
-    choice=input("Visualize raw data? [y/n]")
+    choice=input("Visualize raw data on PCA? [y/n]")
     print()
     if choice == 'y':
         plotPCA()
