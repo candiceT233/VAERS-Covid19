@@ -1,4 +1,4 @@
-# VAERS-Covid19
+# VAERS-Covid19-MachineLearning
 Project idea from Kaggle: COVID-19 World Vaccine Adverse Reactions by Ayush Garg.
 Project for class CS584ML
 
